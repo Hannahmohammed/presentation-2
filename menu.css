@@ -1,0 +1,222 @@
+:root{
+    --green: #27ae60;
+    --black: #192a56;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0.1);
+}
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    /* transition: all .2s linear; */
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+
+header{
+    position: fixed;
+    top: o; left: 0; right:0;
+    background: #fff;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    /* box-shadow: var(--box-shadow); */
+}
+.image{
+    width: 150px;
+}
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: var(--light-color);
+}
+header .navbar a:active,
+header .navbar a:hover{
+    color: #fff;
+    background: var(--green);
+}
+
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+
+ header .icons i:hover,
+header .icons a:hover{
+    color: #fff;
+    background: var(--green);
+  
+} 
+
+header .icons #menu-icon{
+ display: none; 
+}
+
+
+
+/* media queries */
+@media screen and (max-width:910px) {
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 1rem 2rem;
+    }
+    header .icons #menu-icon{
+        display: inline-block;
+    }
+
+    header .navbar{
+       position: absolute; 
+       top: 0;left: 0;
+       background: #fff;
+       border-top: 1rem solid rgba(0, 0, 0, .2);
+       padding: 1rem;
+       clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #eee;
+    }
+}
+
+@media screen and(max-width:991px){
+    html{
+        font-size: 58%;
+    }
+
+    
+}
+
+/* menu */
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box{
+    background: var(--green);
+    border: 1rem solid rgba(0, 0, 0, .2);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+}
+
+.menu .box-container .box:hover{
+    transform: scale(1.04);
+}
+
+.menu .box-container .box .image{
+    height: 25rem;
+    width: 100%;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+.menu .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.menu .box-container .box  h3{
+    color:#fff;
+    font-size: 2.5rem;
+}
+
+.menu .box-container .box .content p{
+    color: var(--light-color);
+    font-size: bolder;
+    padding: 5rem 0;
+    line-height: 1.5rem;
+}
+
+.menu .box-container .box .content .btn{
+    background-color: #fff;
+    width: .8rem;
+    border-radius: 5px;
+    font-size: 20px;
+    color: var(--black);
+}
+
+.menu .box-container .box .content .btn:hover{
+    transition: .3s;
+    color: var(--green);
+}
+
+.menu .box-container .box .content .price{
+    columns: var(--green);
+    margin-left: 1rem;
+    font-size: 2.5rem;
+}
+
+.menu .box-container .box .content h2{
+    font-size: small;
+}
+
+
+/* footer */
+.footer{
+    background-color: var(--black);
+    margin-top: 10px;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1rem));
+    gap: 1.5rem;
+}
+
+.footer .box-container .boxe{
+    font-size: 2rem;
+    margin-top: 15px;
+}
+
+.footer .box-container .boxe a{
+    display: block;
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+.footer .box-container .boxe a:hover{
+    color: var(--green);
+    text-decoration: underline;
+}
+
+.footer .credit{
+    border-top: .1rem solid rgba(0,0,0.1);
+    font-size: 2rem;
+    color: var(--light-color);
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    text-align: center;
+}
